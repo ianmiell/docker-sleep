@@ -1,5 +1,6 @@
-nasm -f elf64 sleep.asm -o sleep.o
-ld sleep.o -o sleep
-strip -s sleep
-./sleep
 
+To make tar smaller:
+
+manifest.json - refer to xxx.json file as a single char. refer to subfolder with a single char.
+
+json - file with name json can be reduced a lot.

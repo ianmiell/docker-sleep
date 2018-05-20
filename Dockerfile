@@ -1,2 +1,2 @@
 FROM scratch
-ADD sleep /sleep
+ADD s /s
