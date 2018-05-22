@@ -1,2 +1,2 @@
 FROM scratch
-ADD t /s
+ADD s /s
