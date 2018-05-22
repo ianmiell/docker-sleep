@@ -7,9 +7,9 @@
 
 ehdr:
   db  0x7F, "ELF"       ; e_ident
-  db  1                 ; EI_CLASS
-  db  1                 ; EI_DATA
-  db  1                 ; EI_VERSION
+  db  0                 ; EI_CLASS
+  db  0                 ; EI_DATA
+  db  0                 ; EI_VERSION
   db  0                 ; EI_OSABI
 
 _start:
@@ -23,7 +23,7 @@ _start:
 
   dw  2                 ; e_type
   dw  3                 ; e_machine
-  dd  1                 ; e_version
+  dd  0                 ; e_version
   dd  _start            ; e_entry
   dd  phdr - ehdr       ; e_phoff
 phdr:
@@ -36,8 +36,7 @@ phdr:
   dd  filesize          ; e_shnum       ; p_filesz
                         ; e_shstrndx
   dd  filesize                          ; p_memsz
-  db  5                                 ; p_flags
-  times 3 db 0
+  dd  5                                 ; p_flags
   dd  0                                 ; p_align
 
 END:
